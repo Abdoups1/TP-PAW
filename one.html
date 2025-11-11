@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added for responsiveness -->
+    <title>TP2 - Attendance & Add Student</title>
+    <link rel="stylesheet" href="two.css">
+</head>
+<body>
+    <!-- === NAVIGATION === -->
+    <nav class="nav">
+        <a href="#home" class="left">Home</a>
+        <a href="#attendance">Attendance List</a>
+        <a href="#add">Add Student</a>
+        <a href="#">Reports</a>
+        <a href="#">Logout</a>
+    </nav>
+
+    <!-- === ATTENDANCE TABLE === -->
+    <h1 id="attendance">Attendance Table</h1>
+    <table id="attendanceTable">
+        <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th colspan="6">Sessions (S1–S6)</th>
+            <th colspan="6">Participation (P1–P6)</th>
+            <th>Absences</th>
+            <th>Participations</th>
+            <th>Message</th>
+        </tr>
+        <tr>
+            <td>kochila</td>
+            <td>Samah</td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td class="abs"></td>
+            <td class="par"></td>
+            <td class="msg"></td>
+        </tr>
+        <tr>
+            <td>bouden</td>
+            <td>sidali</td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td class="abs"></td>
+            <td class="par"></td>
+            <td class="msg"></td>
+        </tr>
+        <tr>
+            <td>stizi</td>
+            <td>kamel</td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td class="abs"></td>
+            <td class="par"></td>
+            <td class="msg"></td>
+        </tr>
+    </table>
+    <div class="button-container">
+        <button id="highlightExcellent">🌟 Highlight Excellent Students</button>
+        <button id="resetColors">🔄 Reset Colors</button>
+    </div>
+    <div class="main-content-wrapper">
+         <div class="form-container">
+            <h1 id="add">Add New Student</h1>
+            <form id="studentForm" action="#" method="post">
+                <label for="studentId">Student ID:</label>
+                <input type="text" id="studentId" name="studentId">
+                <small class="error" id="idError"></small>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName">
+                <small class="error" id="lastNameError"></small>
+
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName">
+                <small class="error" id="firstNameError"></small>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <small class="error" id="emailError"></small>
+                
+                <button type="submit">Add Student</button>
+            </form>
+        </div>
+        <div class="report-section">
+            <h1>Class Report</h1>
+            <button id="generateReport">Generate Report</button>
+            <div id="reportOutput"></div>
+            <canvas id="reportChart" width="300" height="300"></canvas>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="three.js"></script>
+    </div>
+    <footer>
+        <p>&copy; University of Algiers 1 &#9400</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
