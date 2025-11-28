@@ -22,7 +22,7 @@ function updateAttendance() {
     const msg = row.querySelector(".msg");
     if (abs < 3 && par >= 4)
       msg.textContent = "Good attendance – Excellent participation";
-    else if (abs >= 3 && abs <= 4)
+    else if (abs >= 3 && abs <= 4) 
       msg.textContent = "Warning – attendance low – You need to participate more";
     else
       msg.textContent = "Excluded – too many absences – You need to participate more";
